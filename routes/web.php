@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 Route::get('/contact',[ContactController::class,'index']);
 Route::post('/contact',[ContactController::class,'send'])->name('contact.send');
+
+
