@@ -1,13 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UsersController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/contact',[ContactController::class,'index']);
-Route::post('/contact',[ContactController::class,'send'])->name('contact.send');
-
-
+ Route::resource('users', UsersController::class);
